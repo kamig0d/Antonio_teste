@@ -1,0 +1,93 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: #222;
+    font-family: Verdana;
+    font-size: 100%;
+    color: #fff;
+}
+
+.container{
+    width: 1200px;
+    padding: 10px;
+    margin: auto;
+    margin-top: 20px;
+}
+
+nav {
+    width: 300px;
+    height: 500px;
+    box-sizing: border-box;
+    padding: 10px;
+    float: left;
+    background-color: #555;
+}
+
+section{
+    background-color: #fff;
+    color: #333;
+    width: 870px;
+    height: 500px;
+    margin-left: 10px;
+    float: left;
+    box-sizing: border-box;
+    padding: 10px;
+}
+
+ul.menu{
+    list-style-type: none;
+}
+
+ul.menu li{
+    width: 250px;
+    height: 40px;
+    line-height: 40px;
+    box-sizing: border-box;
+    padding-left: 10px;
+    background-color: #777;
+    margin-top: 5px;
+    cursor: pointer;
+}
+
+ul.menu li:hover{
+    background-color: #888;
+}
+
+
+.btn{
+    width: 120px;
+    height: 30px;
+    border: 3px solid #ddd;
+    border-radius: 5px;
+}
+
+.salvar{
+    background-color: #006a00;
+    color: aliceblue;
+    cursor: pointer;
+}
+
+.limpar {
+    background-color: #021152;
+    color: aliceblue;
+    cursor: pointer;
+}
+
+
+.campo{
+    200px;
+    height: 30px;
+    border-radius: 3px;
+    margin-top: 5px;
+    border: 3px solid #ddd;
+    
+}
+
+a{
+    text-decoration: none;
+    color: aliceblue;
+}
+

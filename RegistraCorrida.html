@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+ <html lang="pt-bt">
+        <head>
+            <meta charset="utf-8">
+            <title>Teste Web</title>
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <meta name="author" content="Antonio Izilvane">
+            <meta name="description" content="CURSO DE HTML5 E CSS 3">
+            <link rel="stylesheet" href="styleConsulta.css">
+            <link rel="stylesheet" href="css/bootstrap.min">
+            <link rel="stylesheet" href="css/bootstrap-theme.min">
+            <script src="js/jquery-3.3.1.min.js"></script>
+            <script src="js/jquery.mask.min.js"></script>
+            <script src="js/bootstrap.min.js"></script>
+            <script src="js/bootstrap-notify.min.js"></script>
+            
+            <script type="text/javascript">
+                $(document).ready(function(){
+                    $('#valor').mask('###.###.###,00', {reverse: true});
+                });
+               
+            </script>
+            
+          <script type="text/javascript">
+                          
+            
+                
+                $("document").ready(function(){
+                  $("#form6").submit(function(){
+                   
+                    var dados = $("#form6").serialize();
+                    $.ajax({
+                      type: "POST",
+                      dataType: "html",
+                      url: "registra.php", 
+                      data: dados,
+                      success: function(data) {
+                        alert(data);
+                      }
+
+                    
+                    });
+                    
+                  });
+                });
+            
+            
+            </script>
+            
+            
+        </head>
+        
+        <body>
+           
+            <div class="container">
+       <nav>
+           <ul class="menu">
+               <li><a href="Motorista.html">Motorista Cadastro</a></li>
+               <li><a href="Passageiro.html">Passageiro Cadastro</a></li>
+               <li><a href="RegistraCorrida.html">Registrar Corrida</a></li>
+               <li><a href="consultarCorridas.php">Consultar Corrida</a></li>
+               <li><a href="ConsultarMotorista.php">Consultar Motoristas</a></li>
+               <li><a href="ConsultarPassageiro.php">Consultar Passageiro</a></li>
+               <li><a href="ControleFerias.php">Controle de Ferias</a></li>
+           </ul>
+       </nav>
+       <section>
+          
+           <h1>Registrar Corrida</h1>
+           <br>
+           <br>
+           
+           <form name="form6" id="form6" >
+             <input type="submit" id="registrar" name="submit" class="btn salvar" value="Cadastrar" >
+             <br><br>
+             
+             Digite o nome do motorista:
+             <br>
+             <input type="text" placeholder="Motorista"  required autofocus name="motorista" id="motorista" >
+             <br><br>
+             
+             Digite o nome do passageiro:
+             <br>
+             <input type="text" placeholder="Passageiro"  required name="passageiro" id="passageiro" >
+             <br><br>
+             
+             Digite o Valor da corrida:
+             <br>
+             <input type="text" placeholder="R$ 00,00" name="valor" id="valor" required > 
+              
+           </form>
+           
+       </section>
+   </div>
+        </body>
+    </html>
